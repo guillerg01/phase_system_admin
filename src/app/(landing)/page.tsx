@@ -6,16 +6,12 @@ import { Welcome } from "@/components/LandingPage/Content/Welcome";
 import Footer from "@/components/LandingPage/Footer/Footer";
 import LoginModal from "@/components/modals/LoginModal";
 import RegisterModal from "@/components/modals/RegisterModal";
-
+import { GRADIENT } from "@/constants/styles";
 
 const OPETATION_AND_SERVICES_IMAGE = `bg-[url('/landingpage/vecteezy_ev-charging-station-for-future-electric-cars-in-the-concept.svg')] bg-cover`;
 const INFORMATION_AND_FOOTER_IMAGE = `bg-[url('/landingpage/phone-services.png')] bg-cover`;
 
-export const GRADIENT = 'bg-[linear-gradient(180deg,_#379854_100%,_#5CFE8D_0%)] opacity-50 ';
-
 export default function Home() {
-
-  
   return (
     <div className="w-[80wv] h-full flex flex-col">
       <Welcome />
@@ -23,13 +19,12 @@ export default function Home() {
         <Operations />
         <Services />
       </div>
-      <div className={`w-[80wv]  ${INFORMATION_AND_FOOTER_IMAGE}`} >
+      <div className={`w-[80wv]  ${INFORMATION_AND_FOOTER_IMAGE}`}>
         <Information />
         <Footer />
       </div>
-      <LoginModal/>
-      <RegisterModal/>
+      <LoginModal />
+      <RegisterModal />
     </div>
   );
 }
-

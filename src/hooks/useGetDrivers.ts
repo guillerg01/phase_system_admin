@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import DriversServices from "../services/DriversServices";
+
 import { Dispatch, SetStateAction } from "react";
+import DriverApiServices from '@/services/DriverApiServices';
 
 export const useGetDrivers = (
   setPageNumber?: Dispatch<SetStateAction<number>>,
@@ -37,7 +38,7 @@ export const useGetDrivers = (
       pageNo: pageNo ? pageNo : "",
     });
 
-    return await DriversServices.get(paramsData);
+    return await DriverApiServices.get(paramsData);
   };
 
   const fetchDrivers = async () => {
